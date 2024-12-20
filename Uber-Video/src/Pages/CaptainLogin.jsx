@@ -22,7 +22,7 @@ function CaptainLogin() {
     <div className='p-7 flex flex-col justify-between h-screen'>
         <div>
         <img
-          className="w-16 mb-10"
+          className="w-20 mb-2"
           src="assets/images/download.png"
           alt=""
         />
@@ -53,11 +53,11 @@ function CaptainLogin() {
         placeholder='password'/>
 
         <button className='bg-[#111] mb-3 rounded px-4 w-full text-lg py-2 text-white font-semibold '>Login</button>
-        <p className='text-center'>Join a fleet? <Link to='/signup' className='text-blue-600'>Register as a Captain</Link></p>
+        <p className='text-center'>Join a fleet? <Link to='/captain-signup' className='text-blue-600'>Register as a Captain</Link></p>
         </form>
         </div>
         <div>
-            <Link to='/captain-login' className='bg-[#d5622d] mb-5 rounded px-4 w-full text-lg py-2 text-white font-semibold  flex items-center justify-center'>Sign in as User</Link>
+            <Link to='/login' className='bg-[#d5622d] mb-5 rounded px-4 w-full text-lg py-2 text-white font-semibold  flex items-center justify-center'>Sign in as User</Link>
         </div>
     </div>
   )
