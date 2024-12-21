@@ -15,8 +15,8 @@ function Home() {
           alt=""
         />
         <div className="bg-white py-4 px-4 pb-7">
-          <h2 className="text-3xl font-bold">Get Started With Uber</h2>
-          <Link to='/login' className="flex items-center justify-center w-full bg-black text-white py-3 rounded mt-5">Continue</Link>
+          <h2 className="text-[30px] font-bold">Get Started With Uber</h2>
+          <Link to='/login' className="flex items-center justify-center w-full bg-black text-white py-3 rounded-lg mt-5">Continue</Link>
         </div>
       </div>
     </div>

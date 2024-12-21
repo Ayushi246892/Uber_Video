@@ -13,7 +13,7 @@ function CaptainSignup() {
           e.preventDefault()
           
           setuserdata({
-              username:{
+              fullname:{
                   firstname:firstname,
                   lastname:lastname
               },
@@ -41,7 +41,7 @@ function CaptainSignup() {
         submitHandler(e)
     }}>
 
-    <h3 className='text-lg font-medium mb-2 '>What's your name</h3>
+    <h3 className='text-lg w-full font-medium mb-2 '>What's our Captain's name</h3>
     <div className='flex gap-4 mb-7'>
     <input 
     required    
@@ -63,7 +63,7 @@ function CaptainSignup() {
     placeholder='last name'/>
     </div>
 
-    <h3 className='text-lg font-medium mb-2 '>What's your email</h3>
+    <h3 className='text-lg font-medium mb-2 '>What's  our Captain's email</h3>
     <input 
     type='email' 
     className='bg-[#eeeeee] mb-6  border rounded px-4 w-full text-lg py-2 placeholder:text-base'
