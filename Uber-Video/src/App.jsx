@@ -6,6 +6,7 @@ import UserSignup from './Pages/UserSignup'
 import CaptainLogin from './Pages/CaptainLogin'
 import CaptainSignup from './Pages/CaptainSignup'
 import { UserDataContext } from './Context/Usercontext'
+import Start from './Pages/Start'
 
 function App  () {
 
@@ -13,7 +14,8 @@ function App  () {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Start/>}/>
+        <Route path='/home' element={<Home/>}/>
         <Route path='/login' element={<UserLogin/>}/>
         <Route path='/signup' element={<UserSignup/>}/>
         <Route path='/captain-login' element={<CaptainLogin/>}/>
