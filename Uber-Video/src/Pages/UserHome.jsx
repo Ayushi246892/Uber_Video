@@ -9,8 +9,11 @@ function UserHome() {
   const [pickup,setpickup] = useState('')
   const [destination,setdestination] = useState('')
   const [panelopen,setpanelopen] = useState(false)
+  const [Vehiclepanelopen,setVehiclepanelopen] = useState(false)
   const panelRef = useRef(null)
   const panelcloseRef = useRef(null)
+  const vehiclepanelRef = useRef(null)
+
      
   const submitHandler = (e) =>{
     e.preventDefault()
@@ -39,6 +42,19 @@ function UserHome() {
      }
   },[panelopen])
 
+  useGSAP(function(){
+    if(Vehiclepanelopen){
+      gsap.to(vehiclepanelRef.current,{
+        transform:'translateY(0)'
+      })
+    }
+    else{
+      gsap.to(vehiclepanelRef.current,{
+        transform:'translateY(100%)'
+      })
+    }
+  },[Vehiclepanelopen])
+
   return (
     <div className='h-screen relative overflow-hidden'>
        <img 
@@ -46,7 +62,7 @@ function UserHome() {
        alt=''
        className='w-16 absolute left-5 top-5'
        />
-       <div className='h-screen w-screen'>
+       <div  className='h-screen w-screen'>
         <img src='https://miro.medium.com/v2/resize:fit:1400/0*gwMx05pqII5hbfmX.gif' className='h-full w-full object-cover' alt=''/>
        </div>
        <div className=' flex flex-col justify-end h-screen absolute top-0 w-full'>
@@ -93,11 +109,17 @@ function UserHome() {
          </form>
          </div>
          <div ref={panelRef} className='h-0 bg-white'>
-               <Locationsearchpanel/>
+               <Locationsearchpanel  setpanelopen={setpanelopen}  setVehiclepanel={setVehiclepanelopen}/>
          </div>
        </div>
 
-       <div className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-8'>
+       <div ref={vehiclepanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-14'>
+        <h5 onClick={()=>{
+          setVehiclepanelopen(false)
+        }}
+         className='p-1 text-center w-[93%] absolute top-0 '>
+        <i className="ri-arrow-down-wide-line text-3xl text-gray-200"></i>
+        </h5>
         <h3 className='text-2xl font-semibold mb-5 '>Choose a Vehicle</h3>
           <div className='flex border-2 mb-2 active:border-black rounded-xl w-full p-3 items-center justify-between'>
               <img className='h-10' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjdmDcPT1FapU0sy2l45X5D0UUVPzlNgBniOlW5wdfcPOFfbhjJw1Mw3tTEDunyeKt3ag&usqp=CAU' alt=''/>
