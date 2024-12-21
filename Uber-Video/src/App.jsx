@@ -7,6 +7,7 @@ import CaptainSignup from './Pages/CaptainSignup'
 import { UserDataContext } from './Context/Usercontext'
 import Start from './Pages/Start'
 import UserHome from './Pages/UserHome'
+import Locationsearchpanel from './component/Locationsearchpanel'
 
 function App  () {
 
@@ -20,6 +21,7 @@ function App  () {
         <Route path='/signup' element={<UserSignup/>}/>
         <Route path='/captain-login' element={<CaptainLogin/>}/>
         <Route path='/captain-signup' element={<CaptainSignup/>}/>
+        <Route path='/locationsearch-panel' element={<Locationsearchpanel/>}/>
       </Routes>
     </div>
   )

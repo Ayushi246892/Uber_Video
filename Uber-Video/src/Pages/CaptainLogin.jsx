@@ -13,7 +13,7 @@ function CaptainLogin() {
             email:email,
             password:password
         })
-        console.log(userdata); 
+        console.log(captaindata); 
         setEmail('')
         setpassword('')
     } 

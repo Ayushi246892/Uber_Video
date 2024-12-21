@@ -39,7 +39,6 @@ function Locationsearchpanel() {
         </h2>
         <h4 className='font-medium'> 24B, Near Kapoor's Cafe, Sheryians Coding School, Bhopal</h4>
       </div>
-      
     </div>
   )
 }
