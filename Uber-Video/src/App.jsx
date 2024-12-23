@@ -10,6 +10,8 @@ import UserHome from './Pages/UserHome'
 import Locationsearchpanel from './component/Locationsearchpanel'
 import ConfirmRide from "./component/ConfirmRide";
 import Vehiclepanel from "./component/Vehiclepanel";
+import WaitingforDriver from './component/WaitingforDriver'
+import LookingforDriver from './component/LookingforDriver'
 
 function App  () {
 
@@ -26,6 +28,8 @@ function App  () {
         <Route path='/locationsearch-panel' element={<Locationsearchpanel/>}/>
         <Route path='/confirmride' element={<ConfirmRide/>}/>
         <Route path='/vehiclepanel' element={<Vehiclepanel/>}/>
+        <Route path='/waitfordriver' element={<WaitingforDriver/>}/>
+        <Route path='/lookingfordriver' element={<LookingforDriver/>}/>
       </Routes>
     </div>
   )
