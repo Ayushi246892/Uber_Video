@@ -1,7 +1,28 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import gsap from 'gsap'
+import Finishride from '../component/Finishride'
 
 const Captainriding = () => {
+
+    const [finishridepanel,setfinishridepanel] = useState(false)
+    const finishridepanelRef = useRef(null)
+
+    useGSAP(function(){
+        if(finishridepanel){
+          gsap.to(finishridepanelRef.current,{
+            transform:'translateY(0)'
+          })
+        }
+        else{
+          gsap.to(finishridepanelRef.current,{
+            transform:'translateY(100%)'
+          })
+        }
+      },[finishridepanel])
+
+
   return (
     <div className='h-screen'>
        <div className='fixed p-6 top-0 flex items-center justify-between w-screen'>
@@ -20,7 +41,9 @@ const Captainriding = () => {
        alt=''/>
        </div>
 
-       <div className='h-1/5 p-6 flex items-center justify-between relative bg-yellow-400'>
+       <div onClick={()=>{
+        setfinishridepanel(true)
+       }} className='h-1/5 p-6 flex items-center justify-between relative bg-yellow-400'>
        <h5 onClick={()=>{
          
         }}
@@ -29,6 +52,10 @@ const Captainriding = () => {
         </h5>
           <h4 className='text-xl font-semibold'>4 KM Away </h4>
           <button className=' bg-green-600 text-white font-semibold p-3 px-10 rounded-lg'>Complete Ride</button>
+       </div>
+
+       <div ref={finishridepanelRef} className='fixed w-full h-screen z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
+          <Finishride setfinishridepanel={setfinishridepanel}/>
        </div>
     </div>
   )

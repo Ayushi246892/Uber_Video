@@ -1,7 +1,15 @@
 import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Confirmridepopup(props) {
+
+    const [otp,setotp] = useState('')
+  
+    const submitHandler = (e) =>{
+        e.preventDefault()
+    }
+
   return (
     <div> 
     <h5 onClick={()=>{
@@ -50,16 +58,26 @@ function Confirmridepopup(props) {
          </div>
          </div>
        </div>
-       <Link to='/captainriding'
-        className='w-full flex justify-center  mt-5 bg-green-600 text-white font-semibold p-3 rounded-lg'>
+       
+       <div className='mt-6 w-full'>
+          <form onSubmit={(e)=>{
+            SubmitHandler(e)
+          }}>
+            <input value={otp} onChange={(e)=>{
+                setotp(e.target.value)
+            }} type='text' className='bg-[#eee] px-6 py-4 font-mono text-lg rounded-lg w-full mt-5' placeholder='Enter Otp'/>
+          <Link to='/captainriding'
+        className='w-full text-lg flex justify-center  mt-5 bg-green-600 text-white font-semibold p-3 rounded-lg'>
          Confirm
        </Link>
        <button onClick={()=>{
          props.setconfirmridepopuppanel(false)
        }}
-        className='w-full mt-1 bg-red-600 text-white font-semibold p-3 rounded-lg'>
+        className='w-full mt-2 bg-red-600 text-lg text-white font-semibold p-3 rounded-lg'>
           Cancel
        </button>
+          </form>
+       </div>
     </div>
 </div>
   )
