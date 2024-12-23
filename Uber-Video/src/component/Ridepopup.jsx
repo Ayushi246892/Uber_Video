@@ -50,7 +50,7 @@ function Ridepopup(props) {
              </div>
            </div>
            <button onClick={()=>{
-              
+              props.setconfirmridepopuppanel(true)
            }}
             className='w-full mt-5 bg-green-600 text-white font-semibold p-2 rounded-lg'>
              Accept
