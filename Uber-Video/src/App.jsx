@@ -17,6 +17,8 @@ import Captainhome from './Pages/Captainhome'
 import Captaindetails from './component/Captaindetails'
 import Ridepopup from './component/Ridepopup'
 import Confirmridepopup from './component/Confirmridepopup'
+import Captainriding from './Pages/Captainriding'
+import Finishride from './component/Finishride'
 
 function App  () {
 
@@ -40,6 +42,8 @@ function App  () {
         <Route path='/captaindetails' element={<Captaindetails/>}/>
         <Route path='/ridepopup' element={<Ridepopup/>}/>
         <Route path='/confirmridepopup' element={<Confirmridepopup/>}/>
+        <Route path='/captainriding' element={<Captainriding/>}/>
+        <Route path='/finishride' element={<Finishride/>}/>
       </Routes>
     </div>
   )
