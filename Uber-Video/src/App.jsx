@@ -12,6 +12,8 @@ import ConfirmRide from "./component/ConfirmRide";
 import Vehiclepanel from "./component/Vehiclepanel";
 import WaitingforDriver from './component/WaitingforDriver'
 import LookingforDriver from './component/LookingforDriver'
+import Riding from './Pages/Riding'
+import Captainhome from './Pages/Captainhome'
 
 function App  () {
 
@@ -30,6 +32,8 @@ function App  () {
         <Route path='/vehiclepanel' element={<Vehiclepanel/>}/>
         <Route path='/waitfordriver' element={<WaitingforDriver/>}/>
         <Route path='/lookingfordriver' element={<LookingforDriver/>}/>
+        <Route path='/riding' element={<Riding/>}/>
+        <Route path='/captainhome' element={<Captainhome/>}/>
       </Routes>
     </div>
   )
