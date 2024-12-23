@@ -14,6 +14,7 @@ import WaitingforDriver from './component/WaitingforDriver'
 import LookingforDriver from './component/LookingforDriver'
 import Riding from './Pages/Riding'
 import Captainhome from './Pages/Captainhome'
+import Captaindetails from './component/Captaindetails'
 
 function App  () {
 
@@ -34,6 +35,7 @@ function App  () {
         <Route path='/lookingfordriver' element={<LookingforDriver/>}/>
         <Route path='/riding' element={<Riding/>}/>
         <Route path='/captainhome' element={<Captainhome/>}/>
+        <Route path='/captaindetails' element={<Captaindetails/>}/>
       </Routes>
     </div>
   )
