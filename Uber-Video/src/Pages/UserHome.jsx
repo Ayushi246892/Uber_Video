@@ -130,10 +130,10 @@ function UserHome() {
          </div>
        </div>
 
-       <div ref={vehiclepanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-14'>
+       <div ref={vehiclepanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
           <Vehiclepanel setconfirmridepanel={setconfirmridepanel} setVehiclepanelopen={setVehiclepanelopen}/>
        </div>
-       <div ref={confirmridepanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-14'>
+       <div ref={confirmridepanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-6 pt-12'>
           <ConfirmRide/>
        </div>
     </div>
