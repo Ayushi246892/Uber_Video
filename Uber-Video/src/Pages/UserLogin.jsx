@@ -19,7 +19,7 @@ function UserLogin() {
         console.log(userData)
 
         // Reset form fields
-        setEmail('')
+        setEmail('')    
         setPassword('')
 
         // Redirect to /login after the form is submitted
