@@ -61,7 +61,7 @@ function Confirmridepopup(props) {
        
        <div className='mt-6 w-full'>
           <form onSubmit={(e)=>{
-            SubmitHandler(e)
+           submitHandler(e)
           }}>
             <input value={otp} onChange={(e)=>{
                 setotp(e.target.value)
