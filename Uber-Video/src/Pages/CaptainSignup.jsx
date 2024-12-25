@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function CaptainSignup() {
 
@@ -8,6 +8,7 @@ function CaptainSignup() {
       const [firstname,setfirstname] = useState('')
       const [lastname,setlastname] = useState('')
       const [userdata,setuserdata] = useState({})
+      const navigate = useNavigate() // To handle redirection
       
       const submitHandler = (e) =>{
           e.preventDefault()
@@ -26,6 +27,7 @@ function CaptainSignup() {
           setfirstname('')
           setlastname('')
           setpassword('')
+          navigate('/captain-login')
       }
 
   return (
