@@ -4,7 +4,8 @@ import Captaindetails from '../component/Captaindetails'
 import Ridepopup from '../component/Ridepopup'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import Confirmridepopup from '../component/Confirmridepopup'
+import ConfirmRidePopUp from '../component/Confirmridepopup'
+
 
 const Captainhome = () => {
      
@@ -69,7 +70,7 @@ const Captainhome = () => {
           <Ridepopup setridepopuppanel={setridepopuppanel} setconfirmridepopuppanel={setconfirmridepopuppanel}/>
        </div>
        <div ref={confirmridepopuppanelRef} className='fixed w-full h-screen z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
-          <Confirmridepopup setconfirmridepopuppanel={setconfirmridepopuppanel} setridepopuppanel={setridepopuppanel}/>
+          <ConfirmRidePopUp setconfirmridepopuppanel={setconfirmridepopuppanel} setridepopuppanel={setridepopuppanel}/>
        </div>
     </div>
   )
