@@ -2,7 +2,8 @@ import { useGSAP } from '@gsap/react'
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
-import Finishride from '../component/Finishride'
+
+import FinishRide from '../component/FinishRide'
 
 const Captainriding = () => {
 
@@ -55,7 +56,7 @@ const Captainriding = () => {
        </div>
 
        <div ref={finishridepanelRef} className='fixed w-full h-screen z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
-          <Finishride setfinishridepanel={setfinishridepanel}/>
+          <FinishRide setfinishridepanel={setfinishridepanel}/>
        </div>
     </div>
   )

@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 
-const Finishride = (props) => {
+const FinishRide = (props) => {
 
     const navigate = useNavigate()
 
@@ -77,4 +77,4 @@ const Finishride = (props) => {
     )
 }
 
-export default Finishride
+export default FinishRide
