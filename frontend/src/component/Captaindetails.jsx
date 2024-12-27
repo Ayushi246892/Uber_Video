@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'
 import { CaptainDataContext } from '../context/CapatainContext'
 
-const Captaindetails = () => {
+const CaptainDetails = () => {
 
     const { captain } = useContext(CaptainDataContext)
 
@@ -40,4 +40,4 @@ const Captaindetails = () => {
     )
 }
 
-export default Captaindetails
+export default CaptainDetails
