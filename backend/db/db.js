@@ -1,12 +1,15 @@
+require('dotenv').config(); // Ensure environment variables are loaded
 const mongoose = require('mongoose');
 
-
 function connectToDb() {
-    mongoose.connect(process.env.DB_CONNECT
-    ).then(() => {
+    console.log('MongoDB URI:', process.env.DB_CONNECT); // Log the URI to verify
+    mongoose.connect(process.env.DB_CONNECT)
+    .then(() => {
         console.log('Connected to DB');
-    }).catch(err => console.log(err));
+    })
+    .catch(err => {
+        console.log('Error connecting to DB:', err);
+    });
 }
-
 
 module.exports = connectToDb;
