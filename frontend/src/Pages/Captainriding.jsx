@@ -2,8 +2,8 @@ import { useGSAP } from '@gsap/react'
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
+import FinishRide from '../component/Finishride'
 
-import FinishRide from '../component/FinishRide'
 
 const Captainriding = () => {
 
